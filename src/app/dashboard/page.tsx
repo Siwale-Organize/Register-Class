@@ -1,5 +1,7 @@
 'use client';
 
+export const dynamic = 'force-dynamic';
+
 import { useState, useMemo, Fragment, useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { dbStudentToStudent, type Student, type Course, type DbEnrollment, type DbEnrollmentFee, type DbPayment } from '@/lib/data';

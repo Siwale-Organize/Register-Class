@@ -1,5 +1,7 @@
 'use client';
 
+export const dynamic = 'force-dynamic';
+
 import { useState, useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import {
@@ -299,7 +301,7 @@ export default function EnrollmentPage() {
         }
 
         for (const item of feeItems) {
-          await supabase.from('enrollment_fees').insert(item);
+          await supabase.from('enrollment_fees').insert(item as any);
         }
 
         // 3. Create payment record

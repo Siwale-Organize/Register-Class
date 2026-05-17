@@ -1,5 +1,7 @@
 'use client';
 
+export const dynamic = 'force-dynamic';
+
 import { useState, useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { ChevronLeft, Users, CheckCircle2, Loader2, KeyRound, Pencil, Eye, EyeOff, ShieldCheck } from 'lucide-react';
@@ -48,7 +50,7 @@ export default function CreateParentAccountPage() {
           .select('id, student_id, first_name_th, last_name_th, nickname')
           .is('deleted_at', null)
           .order('student_id', { ascending: true });
-        setStudents(data ?? []);
+        setStudents((data as unknown as DbStudent[]) ?? []);
       } catch (err) {
         console.error(err);
       } finally {
