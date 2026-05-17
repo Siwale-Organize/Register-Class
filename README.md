@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Class Registration System
 
 A modern Next.js application for managing student class registrations with a beautiful dashboard interface.
@@ -178,3 +179,6 @@ This project is for educational purposes.
 ## Support
 
 For issues or questions, please refer to the project documentation or contact the development team.
+=======
+# Register-Class
+>>>>>>> 105646845af1cf685caa0fc85960c01f92ec6713
